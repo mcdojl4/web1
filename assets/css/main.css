@@ -12,6 +12,15 @@ header {
     height: 100px;
 }
 
+nav > ul > li.active::before{
+    content: '►';
+    color: white;
+}
+
+h1, h2, h3:not(ul.faq li h3){
+    font-family:serif;
+}
+
 svg {
     fill: white;
 }
@@ -51,7 +60,10 @@ ul.faq li {
     color: black;
 }
 
+ul.faq li div::before {
+    content: '►';
+}
+
 footer{
     background: linear-gradient(#BC511B, white);
 }
-
