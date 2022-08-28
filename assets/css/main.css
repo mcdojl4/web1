@@ -18,11 +18,36 @@ ul{
 }
 
 header {
-    height: 100px;
+    padding: 25px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+}
+
+header button {
+    margin-left: auto;
+    display: none;
+}
+
+header svg{
+    height: 75px;
 }
 
 nav {
     padding: 10px;
+    position: fixed;
+
+    display: flex;
+    height: 100vh;
+    top: 0;
+
+    flex-direction: column;
+    justify-content: center;
+
+    font-family: serif;
 }
 
 nav li {
@@ -59,17 +84,36 @@ section {
     margin: 300px 0;
 }
 
+section#main_section {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section#main_section p{
+    width: 75%;
+}
+
+section:not(#about_section, #main_section) h1{
+    text-align: center;
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
 h1{
     font-family: serif;
 }
 
 h1#main_title {
-    font-size: 72px;
+    font-size: 102px;
+    margin-bottom: 0;
 }
 
 /*Arrow symbol in Home section*/
 .border, .full-border{
     display:flex;
+    justify-content: center;
   }
   
   .cap{
@@ -103,8 +147,11 @@ h1#main_title {
     border-top-right-radius:100%;
   }
 
+  /***************************************/
+
 p {
-    font-size: 20px ;
+    font-size: 24px ;
+    line-height: 1.5;
 }
 
 button {
@@ -139,7 +186,24 @@ ul.faq li div::before {
 }
 
 footer{
-    background: linear-gradient(white, #BC511B);
+    background: linear-gradient(transparent, #BC511B);
     padding: 25px;
     border-top:#777 2px solid;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+footer ul{
+    display: flex;
+}
+
+footer ul li {
+    padding: 0 20px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    font-weight: bold;
 }
